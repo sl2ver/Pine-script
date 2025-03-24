@@ -1,0 +1,9 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © sliverrr323
+
+//@version=6
+indicator("이동평균선", overlay = true)
+sma20 = ta.sma(close, 20)
+sma40 = ta.sma(close,40)
+plot(sma20, color = color.aqua)
+plot(sma40, color = color.white)

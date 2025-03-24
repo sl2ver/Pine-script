@@ -1,0 +1,25 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © sliverrr323
+// comment(주석, 댓글)
+// 안녕하세요
+
+//@version=6
+indicator("내 스크립트")
+// plot(close, title = "종가선", color = color.yellow, linewidth = 3)  // 종가를 노란색으로 그리기
+// plot(low, color = color.purple)  // 저가를 보라색으로 그리기
+// plot(high, color = color.green, linewidth = 3)  // 고가를 초록색으로 그리기
+
+// plot(high[200], color = color.green, linewidth = 3)
+// 변수 variable
+// h = high
+// var count = 0
+// count := count + 1
+// plot(h, color = color.green, linewidth = 3)
+// plot(count)
+
+// highest20 = ta.highest(high[1], 20)
+// lowest20 = ta.lowest( low[1], 20)
+// plot(highest20, color = color.green, linewidth = 2)
+// plot(lowest20, color = color.red, linewidth = 2)
+
+plot(close, color = color.aqua)
