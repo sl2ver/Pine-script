@@ -1,0 +1,41 @@
+// This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © sliverrr323
+
+//@version=6
+// indicator("RSI 지표")
+// overbuy = input.int(70, "과매수")
+// oversell = input.int(30, "과매도")
+// length = input.int(14, "길이")
+// rsi = ta.rsi(close, length)
+
+// hline(overbuy)
+// hline(oversell)
+// plot(rsi)
+// bgcolor(ta.crossover(rsi, overbuy) ? color.green : na)
+// bgcolor(ta.crossunder(rsi, oversell) ? color.red : na)
+
+// indicator("컬러가 있는 RSI")
+// rsi = ta.rsi(close, 14)
+// linecolor = color.white
+// if rsi > 90
+//     linecolor := color.green
+// else if rsi > 70
+//     linecolor := color.lime
+// else if rsi > 50
+//     linecolor := color.white
+// else if rsi > 30
+//     linecolor := color.maroon
+// else
+//     linecolor := color.orange
+// plot(rsi, color = linecolor)
+
+indicator("200이평+RSI")
+rsi = ta.rsi(close, 14)
+ma200 = ta.sma(close, 200)
+linecolor = color.white
+if rsi > 70 and close > ma200
+    linecolor := color.red
+else if rsi < 30 and close < ma200
+    linecolor := color.orange
+
+plot(rsi, color = linecolor)
